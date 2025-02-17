@@ -10,8 +10,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
+  --background: #171717;
   --primary: #AA00FF;
   --secondary: #25223D;
   --borderColor: #464558;
@@ -55,12 +55,3 @@ button:hover {
 .bronze-bg{
   background: var(--bronze);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #060611;
-    --foreground: #ededed;
-  }
-}
-
-
