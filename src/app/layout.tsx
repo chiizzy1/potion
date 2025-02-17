@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
+import Footer from "@/components/Footer";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Providers>
             <Navbar />
             {children}
+            <Footer />
           </Providers>
         </body>
       </ReactLenis>
