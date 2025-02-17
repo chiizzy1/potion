@@ -4,17 +4,17 @@ Potion Leaderboard is a Next.js application that displays a table of traders wit
 
 ## Design Decisions
 
-1. **Framework**: I chose Next.js 15 with TypeScript for its robust server-side rendering capabilities, static site generation, and strong typing support .
+1. **Framework**: I chose Next.js 15 with TypeScript for its robust server-side rendering capabilities, static site generation, and strong typing support.
 
 2. **UI Components**: I utilized shadcn/ui components for a consistent and customizable design system.
 
 3. **Styling**: Tailwind CSS was used for rapid development and easy customization.
 
-4. **State Management**: React's built-in useState and useEffect hooks Ire used for local state management, as the application's complexity didn't warrant a more complex state management solution.
+4. **State Management**: React's built-in useState and useEffect hooks Ire used for local state management, as the application's complexity didn't warrant a more complex state management solution. I also used TanStack Query to handle states when interacting with the API.
 
 5. **Image Generation**: I implemented client-side image generation using HTML Canvas to create shareable trader stats images without server-side dependencies.
 
-6. **Responsive Design**: The table is designed to be responsive, with a scrollable horizontal view on smaller screens.
+6. **Responsive Design**: The table is designed to be responsive, with a scrollable horizontal view on smaller screens. I used TanStack Table to build a robust and responsive table.
 
 ## Assumptions
 
@@ -27,8 +27,8 @@ To test the Potion Leaderboard functionality:
 1. Clone the repository and install dependencies:
 
    ```
-   git clone https://github.com/your-repo/potion-leaderboard.git
-   cd potion-leaderboard
+   git clone https://github.com/chiizzy1/potion.git
+   cd potion
    npm install
    ```
 
