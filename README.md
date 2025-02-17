@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Potion Leaderboard
 
-## Getting Started
+Potion Leaderboard is a Next.js application that displays a table of traders with various statistics and allows users to share individual trader stats as branded images.
 
-First, run the development server:
+## Design Decisions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Framework**: I chose Next.js 15 with TypeScript for its robust server-side rendering capabilities, static site generation, and strong typing support .
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **UI Components**: I utilized shadcn/ui components for a consistent and customizable design system.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Styling**: Tailwind CSS was used for rapid development and easy customization.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **State Management**: React's built-in useState and useEffect hooks Ire used for local state management, as the application's complexity didn't warrant a more complex state management solution.
 
-## Learn More
+5. **Image Generation**: I implemented client-side image generation using HTML Canvas to create shareable trader stats images without server-side dependencies.
 
-To learn more about Next.js, take a look at the following resources:
+6. **Responsive Design**: The table is designed to be responsive, with a scrollable horizontal view on smaller screens.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Assumptions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. The API endpoint for fetching trader data is mocked and will be replaced with a real API in production.
 
-## Deploy on Vercel
+## Testing Functionality
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To test the Potion Leaderboard functionality:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository and install dependencies:
+
+   ```
+   git clone https://github.com/your-repo/potion-leaderboard.git
+   cd potion-leaderboard
+   npm install
+   ```
+
+2. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+3. Open `http://localhost:3000` in your browser.
+
+4. Test the following features:
+
+   - Time period filtering (Daily, Iekly, Monthly, All-Time)
+   - Wallet connection simulation (Connect/Disconnect Wallet button)
+   - Table sorting (click on column headers)
+   - Responsive design (resize browser window)
+
+5. Run unit tests:
+
+   ```
+   npm run test
+   ```
+
+## Deployment
+
+### Staging Environment
+
+1. Create a staging branch:
+
+   ```
+   git checkout -b staging
+   git push origin staging
+   ```
+
+2. Set up a Vercel project for staging:
+
+   - Connect your GitHub repository to Vercel
+   - Configure the staging branch as the production branch for this project
+   - Set up environment variables for staging (e.g., API endpoints)
+
+3. Vercel will automatically deploy when changes are pushed to the staging branch
+
+### Production Environment
+
+1. Merge staging into main:
+
+   ```
+   git checkout main
+   git merge staging
+   git push origin main
+   ```
+
+2. Set up a Vercel project for production:
+
+   - Connect your GitHub repository to Vercel
+   - Configure the main branch as the production branch for this project
+   - Set up environment variables for production
+
+3. Vercel will automatically deploy when changes are pushed to the main branch
+
+### Manual Deployment
+
+If you prefer to deploy manually or to a different platform:
+
+1. Build the project:
+
+   ```
+   npm run build
+   ```
+
+2. Start the production server:
+
+   ```
+   npm start
+   ```
+
+3. Deploy the `.next` folder and supporting files to your hosting platform of choice.
+
+## Contributing
+
+Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the `LICENSE.md` file for details.
