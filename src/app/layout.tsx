@@ -15,14 +15,14 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   title: "Potion",
-  description: "Potion leadership dashboard for top degenerate trenchers",
+  description: "Potion Leaderboard is a gamified platform where every Solana memecoin trader",
   openGraph: {
     title: "Potion",
-    description: "Potion leadership dashboard for top degenerate trenchers",
+    description: "Potion Leaderboard is a gamified platform where every Solana memecoin trader",
     type: "website",
     locale: "en-US",
-    url: "",
-    images: "",
+    url: "https://potion-inky.vercel.app/",
+    images: "https://potion-inky.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpotion-logo.c832135b.jpg&w=384&q=75",
   },
 };
 

@@ -55,6 +55,10 @@ To test the Potion Leaderboard functionality:
 
 ## Deployment
 
+### Live Link
+
+You can access the live application at [Potion Leaderboard](https://potion-inky.vercel.app/).
+
 ### Staging Environment
 
 1. Create a staging branch:
